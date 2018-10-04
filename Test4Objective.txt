@@ -1,0 +1,17 @@
+Test Excercise 4
+Modify the EmydexFarmSystem.ReleaseAllAnimals() so that all animals are released (simply clear the collection )
+Expose an event on the FarmSystem FarmEmpty which is invoked once all the animals are released
+Subscribe to that event in the main to get the expected output
+
+Expected Test 4 Program Output
+
+Exercise 4: Press any key to free all animals
+Cow has entered the farm
+Hen has entered the farm
+Horse has entered the farm
+Sheep has entered the farm
+Cow has left the farm
+Hen has left the farm
+Horse has left the farm
+Sheep has left the farm
+Emydex Farm is now empty

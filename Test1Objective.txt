@@ -1,0 +1,13 @@
+Test Excercise 1
+Using your understanding of Object Oriented Programing concepts, modify the classes and program in Test1 to use abstraction and inheritence
+to make the FarmSystem more efficient and easier to maintain and extend 
+Introduce new classes if needed 
+Hold the animals in the farm so they are available for furture activities in a First in First Out basis (Queued animals)
+ 
+Expected Test1 Program Output
+
+Exercise 1 : Press any key when it is time to open the Farm to animals
+Cow has entered the farm
+Hen has entered the farm
+Horse has entered the farm
+Sheep has entered the farm

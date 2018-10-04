@@ -1,0 +1,16 @@
+Test Excercise 2
+If you have completed the first test excercise, you can continue with the second one
+
+Modify the program and EmydexFarmSystem.MakeNoise() method to get the below output
+
+Expected Test 2 Program Output
+
+Exercise 2 : Press any key to scare the animals in the farm
+Cow has entered the farm
+Hen has entered the farm
+Horse has entered the farm
+Sheep has entered the farm
+Cow says Moo!
+Hen says CLUCKAAAAAWWWWK!
+Horse says Neigh!
+Sheep says baa!

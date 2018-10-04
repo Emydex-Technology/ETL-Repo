@@ -1,0 +1,13 @@
+Test Excercise 3
+If you have completed the previous test excercise, you can continue with this one 
+The project includes an interface IMilkableAnimal. Make use of this interface to implement on the relevant classes
+so that calling the EmydexFarmSystem.MilkAnimals() method to get the below output
+
+Expected Test 3 Program Output
+
+Exercise 3 : Press any key when it is time to milk animals
+Cow has entered the farm
+Hen has entered the farm
+Horse has entered the farm
+Sheep has entered the farm
+Cow was milked!
