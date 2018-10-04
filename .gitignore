@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/FarmSystem.Test1/obj/Debug
+/.vs/Emydex.FarmSystem.Test/v15/Server/sqlite3
