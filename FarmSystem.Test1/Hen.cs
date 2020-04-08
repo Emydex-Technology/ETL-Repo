@@ -1,44 +1,15 @@
-﻿using System;
-
-namespace FarmSystem.Test1
+﻿namespace FarmSystem.Test1
 {
-    public class Hen 
+    public class Hen : AnimalBase
     {
-        private string _id;
-        private int _noOfLegs = 4;
-
-
-        public string Id
+        public Hen() : base(2, "Hen", "CLUCKAAAAAWWWWK")
         {
-            get { return _id; }
-            set
-            {
-                _id = value;
-            }
-        }
-        
 
-
-        public int NoOfLegs
-        {
-            get
-            {
-                return _noOfLegs;
-            }
-            set
-            {
-                _noOfLegs = 4;
-            }
         }
 
-        public void Talk()
+        public override void Walk()
         {
-            Console.WriteLine("Hen say CLUCKAAAAAWWWWK!");
-        }
-
-        public void Run()
-        {
-            Console.WriteLine("Hen is running");
+            //Hen cannot walk (Original Hen did not have a Walk function)
         }
     }
 }
