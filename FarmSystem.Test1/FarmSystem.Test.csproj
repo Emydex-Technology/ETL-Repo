@@ -51,17 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cow.cs" />
-    <Compile Include="EmydexFarmSystem.cs" />
-    <Compile Include="Horse.cs" />
-    <Compile Include="IMilkableAnimal.cs" />
-    <Compile Include="Sheep.cs" />
-    <Compile Include="Hen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FarmSystem\FarmSystem.csproj">
+      <Project>{8e08b9ec-622a-4102-830c-bf2e39eda023}</Project>
+      <Name>FarmSystem</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
