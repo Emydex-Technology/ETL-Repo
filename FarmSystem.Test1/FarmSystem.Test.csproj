@@ -51,9 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
     <Compile Include="Cow.cs" />
     <Compile Include="EmydexFarmSystem.cs" />
     <Compile Include="Horse.cs" />
+    <Compile Include="IAnimal.cs" />
+    <Compile Include="ICanProduceMilk.cs" />
+    <Compile Include="ICanRun.cs" />
+    <Compile Include="ICanTalk.cs" />
+    <Compile Include="ICanWalk.cs" />
     <Compile Include="IMilkableAnimal.cs" />
     <Compile Include="Sheep.cs" />
     <Compile Include="Hen.cs" />
@@ -61,6 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

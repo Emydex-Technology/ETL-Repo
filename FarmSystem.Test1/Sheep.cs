@@ -1,44 +1,19 @@
-﻿using System;
-
-namespace FarmSystem.Test1
+﻿namespace FarmSystem.Test1
 {
-    public class Sheep 
+    public class Sheep : Animal, ICanTalk, ICanRun
     {
-       
-        private string _id;
-        private int _noOfLegs;
-
-        public string Id
+        public Sheep(string id, int numberOfLegs) : base(id, numberOfLegs, nameof(Sheep))
         {
-            get { return _id; }
-            set
-            {
-                _id = value;
-            }
         }
 
-
-        public int NoOfLegs
+        public string Talk()
         {
-            get
-            {
-                return _noOfLegs;
-            }
-            set
-            {
-                _noOfLegs = 4;
-            }
-        }
-
-
-        public void Talk()
-        {
-            Console.WriteLine("Sheep says baa!");
+            return $"{nameof(Sheep)} says baa!";
         }
         
-        public void Run()
+        public string Run()
         {
-            Console.WriteLine("Sheep is running");
+            return $"{nameof(Sheep)} is running";
         }
     }
 
