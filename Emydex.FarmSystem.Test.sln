@@ -1,12 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmSystem.Test", "FarmSystem.Test1\FarmSystem.Test.csproj", "{B0742D37-2746-45D6-9133-4A1BA51D9814}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDF25823-F554-4723-A2F5-4CF23A21F118}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		Test1Objective.txt = Test1Objective.txt
 		Test2Objective.txt = Test2Objective.txt
 		Test3Objective.txt = Test3Objective.txt
