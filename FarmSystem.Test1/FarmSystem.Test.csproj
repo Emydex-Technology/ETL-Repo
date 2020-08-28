@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Cow.cs" />
     <Compile Include="EmydexFarmSystem.cs" />
+    <Compile Include="FarmAnimal.cs" />
     <Compile Include="Horse.cs" />
     <Compile Include="IMilkableAnimal.cs" />
     <Compile Include="Sheep.cs" />

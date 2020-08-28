@@ -2,43 +2,21 @@
 
 namespace FarmSystem.Test1
 {
-    public class Hen 
+    public class Hen : FarmAnimal
     {
-        private string _id;
-        private int _noOfLegs = 4;
-
-
-        public string Id
+        public static Hen Create()
         {
-            get { return _id; }
-            set
+            return new Hen()
             {
-                _id = value;
-            }
-        }
-        
-
-
-        public int NoOfLegs
-        {
-            get
-            {
-                return _noOfLegs;
-            }
-            set
-            {
-                _noOfLegs = 4;
-            }
+                Id = new Guid().ToString(),
+                NoOfLegs = 2,
+                IsMilkable = false
+            };
         }
 
-        public void Talk()
+        public override void Talk()
         {
             Console.WriteLine("Hen say CLUCKAAAAAWWWWK!");
-        }
-
-        public void Run()
-        {
-            Console.WriteLine("Hen is running");
         }
     }
 }

@@ -1,34 +1,71 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace FarmSystem.Test1
 {
     public class EmydexFarmSystem
     {
-        //TEST 1
-        public void Enter(object animal)
+        public ObservableCollection<FarmAnimal> _currentFarmAnimals;
+
+        public EmydexFarmSystem()
         {
-            //TODO Modify the code so that we can display the type of animal (cow, sheep etc) 
-            //Hold all the animals so it is available for future activities
-            Console.WriteLine("Animal has entered the Emydex farm");
+            _currentFarmAnimals = new ObservableCollection<FarmAnimal>();
+            _currentFarmAnimals.CollectionChanged += CurrentFarmAnimalsUpdated;
         }
-     
+
+        void CurrentFarmAnimalsUpdated(object sender, EventArgs e)
+        {
+            if (sender == null) return;
+            var farmAnimals = (ObservableCollection<FarmAnimal>)sender;
+            if (farmAnimals.Count() == 0)
+            {
+                FarmEmpty();
+            }
+        }
+
+        //TEST 1
+        public void Enter(FarmAnimal animal)
+        {
+            var animalType = (animal.GetType()).Name;
+            _currentFarmAnimals.Add(animal);
+            Console.WriteLine($"{animalType} has entered the farm");
+        }
+
         //TEST 2
         public void MakeNoise()
         {
-            //Test 2 : Modify this method to make the animals talk
-            Console.WriteLine("There are no animals in the farm");
+            foreach (var animal in _currentFarmAnimals)
+            {
+                animal.Talk();
+            }
         }
 
         //TEST 3
         public void MilkAnimals()
         {
-            Console.WriteLine("Cannot identify the farm animals which can be milked");
+            var milkableAnimals = _currentFarmAnimals.Where(x => x.IsMilkable);
+
+            foreach (var animal in milkableAnimals)
+            {
+                animal.ProduceMilk();
+            }
         }
 
         //TEST 4
         public void ReleaseAllAnimals()
         {
-           Console.WriteLine("There are still animals in the farm, farm is not free");
+            foreach (var animal in _currentFarmAnimals)
+            {
+                var animalType = (animal.GetType()).Name;
+                Console.WriteLine($"{animalType} has left the farm");
+            }
+            _currentFarmAnimals.Clear();
+        }
+
+        public void FarmEmpty()
+        {
+            Console.WriteLine("Emydex Farm is now empty");
         }
     }
 }
