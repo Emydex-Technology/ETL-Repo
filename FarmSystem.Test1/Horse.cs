@@ -2,43 +2,21 @@
 
 namespace FarmSystem.Test1
 {
-    public class Horse 
+    public class Horse : FarmAnimal
     {
-        private string _id;
-        private int _noOfLegs;
-
-        public string Id
+        public static Horse Create()
         {
-            get { return _id; }
-            set
+            return new Horse()
             {
-                _id = value;
-            }
+                Id = new Guid().ToString(),
+                NoOfLegs = 4,
+                IsMilkable = false
+            };
         }
 
-
-        public int NoOfLegs
+        public override void Talk()
         {
-            get
-            {
-                return _noOfLegs;
-            }
-            set
-            {
-                _noOfLegs = 4;
-            }
+            Console.WriteLine("Horse says Neigh!");
         }
-        
-
-        public void Talk()
-        {
-            Console.WriteLine("Horse says neigh!");
-        }
-
-        public void Run()
-        {
-            Console.WriteLine("Horse is running");
-        }
-        
     }
 }
