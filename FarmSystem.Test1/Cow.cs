@@ -2,11 +2,14 @@
 
 namespace FarmSystem.Test1
 {
-    public class Cow 
+    public class Cow : Animal
     {
+        private const string NAME = "Cow";
+
         private string _id;
         private int _noOfLegs = 4;
 
+        public override string Name => NAME;
 
         public string Id
         {

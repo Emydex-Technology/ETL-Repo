@@ -5,16 +5,16 @@ namespace FarmSystem.Test1
     public class EmydexFarmSystem
     {
         //TEST 1
-        public void Enter(object animal)
+        public void Enter(Animal animal)
         {
             //TODO Modify the code so that we can display the type of animal (cow, sheep etc) 
             //Hold all the animals so it is available for future activities
             Console.WriteLine(this.EnterLine(animal));
         }
 
-        public string EnterLine(object animal)
+        public string EnterLine(Animal animal)
         {
-            return "Animal has entered the Emydex farm";
+            return $"{animal.Name} has entered the farm";
         }
      
         //TEST 2
