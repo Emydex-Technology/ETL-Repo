@@ -9,7 +9,12 @@ namespace FarmSystem.Test1
         {
             //TODO Modify the code so that we can display the type of animal (cow, sheep etc) 
             //Hold all the animals so it is available for future activities
-            Console.WriteLine("Animal has entered the Emydex farm");
+            Console.WriteLine(this.EnterLine(animal));
+        }
+
+        public string EnterLine(object animal)
+        {
+            return "Animal has entered the Emydex farm";
         }
      
         //TEST 2
